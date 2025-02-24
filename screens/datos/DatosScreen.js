@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import styles from './LoginScreen.styles.js';
+import styles from './DatosScreen.styles.js';
 
 export default function HomeScreen() {
     const navigation = useNavigation();
