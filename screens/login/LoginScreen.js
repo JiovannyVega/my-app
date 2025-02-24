@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TextInput, TouchableHighlight } from 'react-native';
+import { View, Text, TextInput, TouchableHighlight, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import styles from './LoginScreen.styles.js';
 
@@ -12,39 +12,43 @@ export default function HomeScreen() {
         <View style={styles.container}>
             <Text style={styles.title}>Inicia sesión</Text>
             <Text style={styles.subtitle}>Ingresa tus datos a continuación</Text>
-            <TextInput
-                style={styles.curpInput}
-                onChangeText={onChangeCURP}
-                value={curp}
-                placeholder='Ingresa tu CURP'
-                autoCapitalize='characters'
-            />
-            <TouchableHighlight
-                onPress={() => {
-                    // Ir a página de consulta tu CURP
-                }}
-            >
-                <View style={styles.link}>
-                    <Text style={styles.textBtn}>Consulta tu CURP</Text>
-                </View>
-            </TouchableHighlight>
-            <TextInput
-                style={styles.emailInput}
-                onChangeText={onChangeEmail}
-                value={email}
-                placeholder='Ingresa tu correo electrónico'
-                autoCapitalize='none'
-                keyboardType='email-address'
-            />
-            <TouchableHighlight
-                onPress={() => {
-                    // Ingresar
-                }}
-            >
-                <View style={styles.loginBtn}>
-                    <Text style={styles.textBtn}>Ingresar</Text>
-                </View>
-            </TouchableHighlight>
+            <View style={styles.form}>
+                <TextInput
+                    style={styles.formInput}
+                    onChangeText={onChangeCURP}
+                    value={curp}
+                    placeholder='Ingresa tu CURP'
+                    placeholderTextColor='#C5C5C5'
+                    autoCapitalize='characters'
+                />
+                <TouchableOpacity
+                    onPress={() => {
+                        // Ir a página de consulta tu CURP
+                    }}
+                >
+                    <View>
+                        <Text style={styles.textLink}>Consulta tu CURP</Text>
+                    </View>
+                </TouchableOpacity>
+                <TextInput
+                    style={styles.formInput}
+                    onChangeText={onChangeEmail}
+                    value={email}
+                    placeholder='Ingresa tu correo electrónico'
+                    placeholderTextColor='#C5C5C5'
+                    autoCapitalize='none'
+                    keyboardType='email-address'
+                />
+                <TouchableOpacity
+                    onPress={() => {
+                        // Ingresar
+                    }}
+                >
+                    <View style={styles.btn}>
+                        <Text style={styles.loginBtn}>Ingresar</Text>
+                    </View>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 }
