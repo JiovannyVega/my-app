@@ -41,7 +41,7 @@ export default function HomeScreen() {
                 />
                 <TouchableOpacity
                     onPress={() => {
-                        // Ingresar
+                        navigation.navigate('DatosScreen');
                     }}
                 >
                     <View style={styles.btn}>
