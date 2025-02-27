@@ -9,7 +9,12 @@ export default function HomeStackNavigator() {
     return (
         <Stack.Navigator>
             <Stack.Screen name="LoginScreen" component={LoginScreen} screenOptions={{ headerShown: false }} />
-            <Stack.Screen name="DatosScreen" component={DatosScreen} />
+            <Stack.Screen name="DatosScreen" component={DatosScreen} options={{
+                headerStyle: { backgroundColor: '#184666' },
+                headerTintColor: '#F7F7F7',
+                headerTitleStyle: { fontSize: 40, fontWeight: 'semibold' },
+                title: 'Datos',
+            }}/>
         </Stack.Navigator>
     );
 }

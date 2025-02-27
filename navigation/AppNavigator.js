@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import LoginNavigator from './LoginStackNavigator';
+import LoginNavigator from './HomeStackNavigator';
 
 const Tab = createBottomTabNavigator();
 
